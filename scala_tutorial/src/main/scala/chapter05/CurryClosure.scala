@@ -8,9 +8,10 @@ object CurryClosure {
     val add4 = add(4, _)
     println(add4(1))
 
-    // currying, 把一个参数列表变成多个参数列表
+    // currying, 把一个参数列表变成多个参数列表，每提供一个参数，就返回一个函数，用作下一个输入的参数
     def addCurrying(a: Int)(b: Int): Int = a + b
-    println(addCurrying(4)(5))
+    val addCurryingTest = addCurrying(4) _
+    println(addCurryingTest(5))
 
   }
 

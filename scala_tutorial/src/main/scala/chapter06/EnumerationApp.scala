@@ -3,6 +3,10 @@ package chapter06
 object EnumerationApp {
   def main(args: Array[String]): Unit = {
     println(WorkDay.MONDAY)
+
+    for(w <- WorkDay.values)
+      println(w.id)
+
   }
 }
 
