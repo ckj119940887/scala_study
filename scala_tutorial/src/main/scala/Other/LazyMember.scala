@@ -30,13 +30,16 @@ trait LazyRationalTrait {
 }
 
 object LazyMember extends App {
-  // 此时会报错，require处报错，因为还为求值，所以使用的时默认值0
+  // 此时会报错，require处报错，因为还没求值，所以使用的时默认值0
+  //匿名类是在 RationalTrai t 特质之后被初始化的 。 因此，在
+  //Rational Trait 的初始化过程中， numerArg 和 denomArg 的值并不可用
 //  new RationalTrait {
 //    val numerArg = 1
 //    val denomArg = 2
 //  }
 
   // 解决该问题的两种方法：1.预初始化字段 2.lazy
+  // 初始化的代码段出现在超特质 Rational Trait 之前，以 with 隔开
   new {
     val numerArg = 1
     val denomArg = 2

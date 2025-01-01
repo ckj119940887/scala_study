@@ -7,7 +7,7 @@ abstract class Animal {
 }
 
 // 无法编译如下内容，Cow的eat方法并没有重写Animal类的eat方法
-// Cow类时Grass，而Animal类是Food
+// Cow类是Grass，而Animal类是Food
 class Grass extends Food
 class Cow extends Animal {
   override def eat(food: Grass): Unit = {}

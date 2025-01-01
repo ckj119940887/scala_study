@@ -3,6 +3,7 @@ package Other
 /*
 类名与参数列表之间的private用来表明构造方法是私有的，即无法直接通过 new Queue(List(1, 2), List(3)) 来构造
 但是还是要提供构造函数，这里有两种方法：1）提供辅助构造方法；2）伴生对象
+Queue 是一个特质，而 Queue[String］是一个类型。所以并不存在 def test(q : Queue)，而只存在 def test(q : Queue[Int])
  */
 class Queue[T] private (private val leading: List[T], private val trailing: List[T]) {
   // 辅助构造方法

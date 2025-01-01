@@ -12,5 +12,6 @@ object OptionStudy extends App {
     case None => "?"
   }
 
+  println(capitals get "China")
   println(show(capitals get "China"))
 }

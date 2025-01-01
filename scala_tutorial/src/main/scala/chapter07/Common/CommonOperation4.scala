@@ -32,6 +32,7 @@ object CommonOperation4 extends App {
 
   // group
   val groupList = list1.groupBy(_ % 2 == 1)
+  println(groupList)
   val oddList = groupList.get(true).get
   val evenList = groupList.get(false).get
   println(oddList)
